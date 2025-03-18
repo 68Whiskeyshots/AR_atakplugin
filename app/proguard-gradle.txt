@@ -1,3 +1,4 @@
+// app/proguard-gradle.txt
 -dontskipnonpubliclibraryclasses
 -dontshrink
 -dontoptimize
@@ -8,7 +9,7 @@
 -keepattributes SourceFile,LineNumberTable
 
 -applymapping <atak.proguard.mapping>
--repackageclasses atakplugin.helloworld
+-repackageclasses atakplugin.apex
 
 -keepattributes *Annotation*
 -keepattributes Signature, InnerClasses
