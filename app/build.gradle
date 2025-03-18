@@ -1,3 +1,4 @@
+// app/build.gradle
 ////////////////////////////////////////////////////////////////////////////////
 //
 // PLUGIN_VERSION is the common version name when describing the plugin.
@@ -141,13 +142,13 @@ android {
         debug {
             storeFile file("${buildDir}/android_keystore")
             storePassword "tnttnt"
-            keyAlias "wintec_mapping"
+            keyAlias "apex_mapping"
             keyPassword "tnttnt"
         }
         release {
             storeFile file("${buildDir}/android_keystore")
             storePassword "tnttnt"
-            keyAlias "wintec_mapping"
+            keyAlias "apex_mapping"
             keyPassword "tnttnt"
         }
     }
@@ -197,7 +198,6 @@ android {
 
     packagingOptions {
         exclude 'META-INF/INDEX.LIST'
-
 
         // Extract native libraries from the APK - required for plugin loading
         jniLibs.useLegacyPackaging true
@@ -282,5 +282,5 @@ def getCommandFlavor() {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
+    implementation 'org.json:json:20230227'
 }
-
