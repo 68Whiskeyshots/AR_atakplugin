@@ -1,3 +1,4 @@
+// build.gradle (root project)
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
@@ -22,3 +23,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// settings.gradle
+include ':app'
+
+// gradle.properties
+org.gradle.jvmargs=-Xms256m -Xmx4096m
+org.gradle.daemon=false
+org.gradle.parallel=false
+android.enableR8=false
+android.useAndroidX=true
