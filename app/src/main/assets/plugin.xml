@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- if you change this file, make sure to tick the versionCode in AndroidManifest. -->
+<!-- This file defines the plugin's extension points for ATAK -->
 <plugin>
     <extension
         type="gov.tak.api.plugin.IPlugin"
-        impl="com.atakmap.android.apex.plugin.APEXLifeCycle"
+        impl="com.atakmap.android.arglasses.plugin.ARGlassesLifecycle"
         singleton="true" />
 </plugin>
