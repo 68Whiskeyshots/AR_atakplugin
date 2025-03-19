@@ -2,7 +2,7 @@
 
 ## Overview
 
-This plugin enables ATAK to serve as a data feed provider for augmented reality (AR) glasses. It extracts map information, points of interest, and device orientation data from ATAK and sends it to AR glasses devices via Bluetooth or TCP/IP connections. The plugin runs as a background service to maintain continuous data streaming even when the ATAK app is running in the background.
+This plugin enables ATAK to serve as a data feed provider for augmented reality (AR) glasses. It extracts map information, points of interest, and device orientation data from ATAK and sends it to AR glasses devices via Bluetooth or TCP/IP connections. The plugin runs as a background service to maintain continuous data streaming even when the ATAK app is running in the background. Still in the works, feel free to alter.
 
 ## Structure & Implementation
 
