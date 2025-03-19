@@ -190,4 +190,106 @@ public class ARGlassesDropDownReceiver extends DropDownReceiver implements DropD
      * Update the connection status UI
      * @param connected Whether connected or not
      */
-    private
+    private void updateConnectionStatus(boolean connected) {
+        if (connected) {
+            connectionStatusText.setText(R.string.connected);
+            connectionStatusText.setTextColor(Color.GREEN);
+            connectButton.setText(R.string.disconnect);
+        } else {
+            connectionStatusText.setText(R.string.not_connected);
+            connectionStatusText.setTextColor(Color.RED);
+            connectButton.setText(R.string.connect);
+        }
+    }
+    
+    /**
+     * Update the data service with current settings
+     */
+    private void updateService() {
+        // Create intent to update service settings
+        Intent updateIntent = new Intent(pluginContext, ARGlassesDataService.class);
+        updateIntent.setAction(ARGlassesDataService.ACTION_UPDATE_SETTINGS);
+        
+        // Add current settings
+        updateIntent.putExtra("device_address", deviceAddressInput.getText().toString().trim());
+        
+        String updateRateStr = updateRateInput.getText().toString().trim();
+        int updateRate = 500; // Default
+        try {
+            updateRate = Integer.parseInt(updateRateStr);
+        } catch (NumberFormatException e) {
+            Log.w(TAG, "Invalid update rate, using default");
+        }
+        updateIntent.putExtra("update_rate", updateRate);
+        
+        updateIntent.putExtra("enable_poi", enablePoiCheckbox.isChecked());
+        updateIntent.putExtra("enable_map", enableMapCheckbox.isChecked());
+        updateIntent.putExtra("enable_compass", enableCompassCheckbox.isChecked());
+        
+        // Send the intent to update service settings
+        pluginContext.startService(updateIntent);
+    }
+    
+    /**
+     * Called when an intent is received
+     * @param context The context
+     * @param intent The intent
+     */
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        final String action = intent.getAction();
+        if (action == null) {
+            return;
+        }
+        
+        if (action.equals(SHOW_PLUGIN)) {
+            Log.d(TAG, "Showing AR Glasses plugin dropdown");
+            showDropDown(mainView, HALF_WIDTH, FULL_HEIGHT, FULL_WIDTH, HALF_HEIGHT, false, this);
+        }
+    }
+
+    /**
+     * Called when dropdown selection is removed
+     */
+    @Override
+    public void onDropDownSelectionRemoved() {
+        // Nothing to do
+    }
+
+    /**
+     * Called when dropdown visibility changes
+     * @param visible Whether the dropdown is visible
+     */
+    @Override
+    public void onDropDownVisible(boolean visible) {
+        if (visible) {
+            // Refresh UI when dropdown becomes visible
+            updateConnectionStatus(connectionManager.isConnected());
+        }
+    }
+
+    /**
+     * Called when dropdown size changes
+     * @param width The width
+     * @param height The height
+     */
+    @Override
+    public void onDropDownSizeChanged(double width, double height) {
+        // Nothing to do
+    }
+
+    /**
+     * Called when dropdown is closed
+     */
+    @Override
+    public void onDropDownClose() {
+        // Nothing to do
+    }
+
+    /**
+     * Called to dispose resources
+     */
+    @Override
+    public void disposeImpl() {
+        // No resources to dispose
+    }
