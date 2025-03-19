@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- AR Glasses Frame -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,16H40V8c0-1.1-0.9-2-2-2H10C8.9,6,8,6.9,8,8v8H4c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h4v2c0,1.1,0.9,2,2,2h28
+        c1.1,0,2-0.9,2-2v-2h4c1.1,0,2-0.9,2-2V18C46,16.9,45.1,16,44,16z M12,10h24v6h-4v-4h-16v4h-4V10z M12,38v-2h24v2H12z M42,30h-4
+        v-2h-28v2H6V20h4v2h28v-2h4V30z"/>
+    
+    <!-- Left Lens -->
+    <path
+        android:fillColor="#64B5F6"
+        android:pathData="M14,22m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Right Lens -->
+    <path
+        android:fillColor="#64B5F6"
+        android:pathData="M34,22m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Data Streams -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M20,16L28,22"/>
+    
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M20,28L28,22"/>
+</vector>
