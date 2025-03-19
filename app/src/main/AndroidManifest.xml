@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.atakmap.android.arglasses.plugin"
+    tools:ignore="GoogleAppIndexingWarning">
+
+    <application
+        android:allowBackup="true"
+        android:description="@string/app_desc"
+        android:extractNativeLibs="true"
+        android:icon="@drawable/ar_glasses"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- Specify required API version for ATAK -->
+        <meta-data
+            android:name="plugin-api"
+            android:value="${atakApiVersion}" />
+        <meta-data
+            android:name="app_desc"
+            android:value="@string/app_desc" />
+
+        <!-- Allow for plugin discovery -->
+        <activity
+            android:name="com.atakmap.app.component"
+            android:exported="true"
+            tools:ignore="MissingClass">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="com.atakmap.app.component" />
+            </intent-filter>
+        </activity>
+
+        <!-- Data Service for AR Glasses -->
+        <service
+            android:name="com.atakmap.android.arglasses.ARGlassesDataService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.atakmap.android.arglasses.ARGlassesDataService" />
+            </intent-filter>
+        </service>
+    </application>
+
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+</manifest>
