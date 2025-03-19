@@ -134,3 +134,8 @@ The plugin can be extended in several ways:
 - All network operations run on background threads to avoid UI blocking
 - The plugin uses a foreground service with notification to ensure reliable operation
 - Sensor data is collected directly from the device's sensors for accurate orientation information
+
+## NOTES
+- This project is still in the works, any help would be greatly appreciated!
+- The main AR implementation is the DigiLens Argo (Great product and great team!)
+- Christus est rex
