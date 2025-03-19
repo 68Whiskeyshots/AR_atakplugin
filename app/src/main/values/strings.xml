@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">AR Glasses Feed</string>
+    <!-- Description -->
+    <string name="app_desc">Provides map data, POIs, and compass information to AR glasses</string>
+    
+    <!-- UI Strings -->
+    <string name="connection_status">Connection Status</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting...</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="ar_glasses_settings">AR Glasses Settings</string>
+    <string name="device_address">Device Address</string>
+    <string name="data_update_rate">Data Update Rate (ms)</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="sending_data">Sending Data</string>
+    <string name="stopping_data">Stopping Data Feed</string>
+    <string name="no_device_address">Please enter a device address</string>
+    
+    <!-- Data Channel Strings -->
+    <string name="poi_channel">POI Data</string>
+    <string name="map_channel">Map Data</string>
+    <string name="compass_channel">Compass Data</string>
+    <string name="enable_poi">Enable POI Data</string>
+    <string name="enable_map">Enable Map Data</string>
+    <string name="enable_compass">Enable Compass Data</string>
+</resources>
