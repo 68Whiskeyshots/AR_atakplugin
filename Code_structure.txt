@@ -1,0 +1,38 @@
+ARGlassesPlugin/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── assets/
+│   │   │   │   └── plugin.xml
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── atakmap/
+│   │   │   │           └── android/
+│   │   │   │               └── arglasses/
+│   │   │   │                   ├── ARGlassesDropDownReceiver.java
+│   │   │   │                   ├── ARGlassesMapComponent.java
+│   │   │   │                   ├── ARGlassesDataService.java
+│   │   │   │                   ├── ARGlassesConnectionManager.java
+│   │   │   │                   ├── plugin/
+│   │   │   │                   │   ├── ARGlassesLifecycle.java
+│   │   │   │                   │   ├── ARGlassesPluginTool.java
+│   │   │   │                   │   └── ARGlassesNativeLoader.java
+│   │   │   │                   └── data/
+│   │   │   │                       ├── ARGlassesDataProvider.java
+│   │   │   │                       └── POIData.java
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   │   ├── ar_glasses.png
+│   │   │   │   │   └── ar_glasses_icon.xml
+│   │   │   │   ├── layout/
+│   │   │   │   │   ├── arglasses_main_layout.xml
+│   │   │   │   │   └── arglasses_connection_layout.xml
+│   │   │   │   └── values/
+│   │   │   │       ├── strings.xml
+│   │   │   │       └── styles.xml
+│   │   │   └── AndroidManifest.xml
+│   ├── build.gradle
+│   └── proguard-rules.pro
+├── build.gradle
+├── settings.gradle
+└── gradle.properties
